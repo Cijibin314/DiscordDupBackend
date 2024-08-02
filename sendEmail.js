@@ -6,9 +6,6 @@ const path = require('path');
 const TOKEN_PATH = path.join(__dirname, 'token.json');
 const token = JSON.parse(fs.readFileSync(TOKEN_PATH, 'utf8'));
 
-// Your credentials from the Google Cloud Console
-
-
 // Create OAuth2 client
 const oAuth2Client = new google.auth.OAuth2(process.env.CLIENT_ID, process.env.CLIENT_SECRET, process.env.REDIRECT_URI);
 oAuth2Client.setCredentials(token);
