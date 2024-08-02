@@ -1,6 +1,6 @@
 const supabase = require('../database');
 const inserter = require('./insertData.js');
-const {Message, toJSON} = require('../../frontend/universal/js/message.js');
+const {Message, toJSON} = require('../frontendFiles/message.js');
 
 
 async function readMessage(JSONMessage){

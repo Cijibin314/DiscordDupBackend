@@ -1,6 +1,6 @@
 const supabase = require('../database');
 const fetcher = require('./fetchData.js');
-const {Message, toJSON} = require('../../frontend/universal/js/message.js');
+const {Message, toJSON} = require('../frontendFiles/message.js');
 async function addUser(username_, password_, email_){
     const {data, error} = await supabase
     .from('Users')

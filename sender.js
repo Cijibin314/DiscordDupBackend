@@ -1,4 +1,4 @@
-const {Interaction} = require('../frontend/universal/js/interaction.js');
+const {Interaction} = require('./frontendFiles/interaction.js');
 const {connectedUsers} = require("./connectedUsers.js")
 const WebSocket = require("ws")
 async function readMessage(JSONMessage){

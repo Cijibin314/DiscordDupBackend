@@ -6,8 +6,8 @@ const emailer = require("./sendEmail.js")
 const sender = require("./sender.js")
 const ai = require("./ai.js")
 const connectedUsers = require("./connectedUsers.js")
-const {Message, toJSON} = require('../frontend/universal/js/message.js');
-const {Interaction} = require('../frontend/universal/js/interaction.js');
+const {Message, toJSON} = require('./frontendFiles/message.js');
+const {Interaction} = require('./frontendFiles/interaction.js');
 //outgoing really means unread
 //REALLY IMPORTANT ^^^
 async function checkIncomingMessages(username){
