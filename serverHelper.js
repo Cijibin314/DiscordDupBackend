@@ -99,6 +99,7 @@ async function handleResponse(ws, JSONInteraction){
                 let result = await fetcher.fetchUserPassword(username)
                 if(result !== "User not found"){
                     if(password === result){
+                        console.log("User had correct usernmae and password")
                         response = new Interaction({purpose: "validateUser", userValidated: true, wasSucessful: true, "username": username, "id":id})
                     }else{
                         console.log("IncorrectPassword")
