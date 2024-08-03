@@ -173,6 +173,7 @@ async function handleResponse(ws, JSONInteraction){
                 await emailer.sendEmail(email, username)
                 response = new Interaction({purpose: "sendEmail", wasSucessful: true, "id":id})
             }catch(e){
+                console.log("Error sending email: ", e)
                 response = new Interaction({purpose: "sendEmail", wasSucessful: false, errorMessage: e, "id":id})
             }
             break;
