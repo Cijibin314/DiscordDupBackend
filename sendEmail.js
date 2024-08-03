@@ -55,9 +55,9 @@ fs.readFile('token.json', (err, token) => {
   }
 
   // Test sending an email
-  sendEmail("coltonflather@gmail.com", "Cijibin314")
+  /*sendEmail("coltonflather@gmail.com", "Cijibin314")
     .then(result => console.log('Send email result:', result))
-    .catch(error => console.error('Send email error:', error));
+    .catch(error => console.error('Send email error:', error));*/
 
   module.exports = {
     sendEmail
