@@ -8,7 +8,7 @@ const oAuth2Client = new google.auth.OAuth2(
   process.env.CLIENT_SECRET,
   'urn:ietf:wg:oauth:2.0:oob' // redirect uri
 );
-
+let sendEmail;
 // Check if the token is loaded correctly
 fs.readFile('token.json', (err, token) => {
   if (err) {
@@ -20,7 +20,7 @@ fs.readFile('token.json', (err, token) => {
   oAuth2Client.setCredentials(tokenData);
 
   // Function to send an email
-  async function sendEmail(emailAddress, username) {
+  sendEmail = async (emailAddress, username) =>{
     const gmail = google.gmail({ version: 'v1', auth: oAuth2Client });
 
     const emailLines = [
@@ -55,11 +55,9 @@ fs.readFile('token.json', (err, token) => {
   }
 
   // Test sending an email
-  /*sendEmail("coltonflather@gmail.com", "Cijibin314")
-    .then(result => console.log('Send email result:', result))
-    .catch(error => console.error('Send email error:', error));*/
-
+});
+setTimeout(()=>{
   module.exports = {
     sendEmail
-  };
-});
+  };}
+, 1000)
