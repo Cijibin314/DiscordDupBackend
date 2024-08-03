@@ -169,6 +169,7 @@ async function handleResponse(ws, JSONInteraction){
             try{
                 let email = interaction.getEmail()
                 let username = interaction.getUsername()
+                console.log("Trying to send email to: ", email)
                 await emailer.sendEmail(email, username)
                 response = new Interaction({purpose: "sendEmail", wasSucessful: true, "id":id})
             }catch(e){

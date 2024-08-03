@@ -49,7 +49,7 @@ function onConnect(ws) {
 }
 
 if (!module.parent) {
-  http.createServer(accept).listen(process.env.PORT || 8081);
+  http.createServer(accept).listen(process.env.PORT || 8080);
 } else {
   exports.accept = accept;
 }
